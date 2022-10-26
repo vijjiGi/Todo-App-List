@@ -16,7 +16,9 @@ Like Components->Todos.js,TodoItem.js,DisplayTodo.js
      App.js,index.js are react functions..
 
 First we import useful functions of react and redux..
+
 npm install react-redux frame-motion @reduxjs/toolkt functions react-icons..
+
 After all this we create an input and a button in Todos.js..
 
     const Todos=(props)=>{
@@ -48,8 +50,13 @@ After all this we create an input and a button in Todos.js..
          export default Todos;
          
          
-Then create actions and reducer in reducer.js..for that we import createSlice() method from 
-@reduxjs/toolkit..and create reducer with its name,initialState,reducer functions..In this reducers we create our functions what we required addTodos,DeleteTodos,updateTodos,completeTodos
+Then create actions and reducer in reducer.js..
+
+For that we import createSlice() method from @reduxjs/toolkit..
+
+and create reducer with its name,initialState,reducer functions..
+
+In this reducers we create our functions (addTodos,DeleteTodos,updateTodos,completeTodos)
 
       intialState=[];
       
@@ -86,6 +93,7 @@ Then create actions and reducer in reducer.js..for that we import createSlice() 
   After that we import all the functions and reducer from addTodoReducer..
   
   Then we import reducer in store for convert redux functions to react component
+  
   For this we import configureStore from @reduxjs/toolkit and import reducer from ./reducer
   
           const store=configureStore({
@@ -94,7 +102,9 @@ Then create actions and reducer in reducer.js..for that we import createSlice() 
                   export default store;
                   
 Then we import Provider from react-redux to store the store to convert react component connect 
-to redux component.and import store from './redux/store';and ReactDOM from 'react-dom'
+to redux component.
+
+And import store from './redux/store';and ReactDOM from 'react-dom'
 
             
               const root=ReactDOM.createRoot(document.getElementById('root);
@@ -124,8 +134,10 @@ method as a parameter..
            export default connect(mapStateToProps,mapDispatchToProps)(Todos);         
   
  Then we crete 2Compponents named DisplayTodos.js & TodoItem.js...
- TodoItem.js is to display the functions of todos like update,delte,complete..we take this 
- functions as props..
+ 
+ TodoItem.js is to display the functions of todos like update,delte,complete..
+ 
+ we take this functions as props..
  
         const TodoItem=(props)=>{
             const{item,updateTodo,removeTodo,completeTodo}=props;
@@ -231,6 +243,7 @@ method as a parameter..
         
            
  Then we give some css styles and animations for looking good program.
+ 
  For that we use motion from 'framer-motion' 
       
                          
