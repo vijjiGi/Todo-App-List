@@ -10,16 +10,16 @@ function App() {
       initial={{y:-200}}
       animate={{y:0}}
       transition={{type:'spring',duration:.5}}
-      whileHover={{scale:1.1}} 
-      >Todo App List</motion.h1>
+      whileHover={{scale:1.1}}>Todo App List
+      </motion.h1>
       <motion.div
         initial={{y:1000}}
         animate={{y:0}}
         transition={{type:'spring',duration:1}}
       >
-      <Todos/>
-      <DisplayTodo/>
-      </motion.div>
+        <Todos/>
+        <DisplayTodo/>
+        </motion.div>
     </div>
   );
 }

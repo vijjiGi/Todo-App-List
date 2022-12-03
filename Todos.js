@@ -16,7 +16,7 @@ const mapDispatchToProps=(dispatch)=>{
 
 const Todos = (props) => {
     const [todo,setTodo]=useState('')
-  
+    
     const handleChange=(e)=>{
         e.preventDefault();
         setTodo(e.target.value);
@@ -36,21 +36,21 @@ const Todos = (props) => {
     setTodo("");
 }
 //console.log('props from store',props);
-  return (
-    <div className='addtodos'>
+return (
+<div className='addtodos'>
     <input type='text'
     onChange={(e)=>handleChange(e)}
     placeholder='add todo'
     className='todo-input'
     value={todo}/>
-
     <motion.button 
-      whileHover={{scale:1.1}}
-      whileTap={{scale:0.9}}
+    whileHover={{scale:1.1}}
+    whileTap={{scale:0.9}}
     className='add-btn' onClick={()=>
-    add() } ><GoPlus/></motion.button>
+    add() } ><GoPlus/>
+    </motion.button>
     <br/>
-    </div>
+</div>
   )
 }
 //now we use connect method to connect this component with redux store
